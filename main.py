@@ -82,8 +82,45 @@ for i in fwhm_range:
     plt.axvline(x=i, color="red", linestyle="dotted")
 plt.show()
 
+#---------------scatter plot color---------------
+#horizontal
+horizontal_color = []
+min_horizontal = min(list(data[5]))
+max_horizontal = max(list(data[5]))
+horizontal_length = max_horizontal-min_horizontal
+
+for i in list(data[5]):
+    color = (i-min_horizontal)/horizontal_length
+    horizontal_color.append(color)
+    if color < 0.1:
+        color = 0.1
+        horizontal_color.append(color)
+    else:
+        horizontal_color.append(color)
+    color = 0.1
+#vertical
+vertical_color = []
+min_vertical = min(list(data[6]))
+max_vertical = max(list(data[6]))
+vertical_length = max_vertical-min_vertical
+
+for i in list(data[6]):
+    color = (i-min_vertical)/vertical_length
+    if color < 0.1:
+        color = 0.1
+        vertical_color.append(color)
+    else:
+        vertical_color.append(color)
+    color = 0.1
+
+color_list = []
+loop_range = len(list(data[6]))
+for i in range(0, loop_range):
+    x = [horizontal_color[i], 0, vertical_color[i]]
+    color_list.append(x)
+print(max(color_list)+1)
 #---------------scatter plot----------------
-plt.scatter(list(data[5]), list(data[6]))
+plt.scatter(list(data[5]), list(data[6]), alpha=1, c=color_list)
 plt.title("Scatter plot showing position of ions")
 plt.xlabel("y-axis")
 plt.ylabel("z-axis")
