@@ -80,7 +80,10 @@ plt.axhline(y=max_frequency, color="red", linestyle="dotted")
 plt.axhline(y=half_max_freq, color="red", linestyle="dotted")
 for i in fwhm_range:
     plt.axvline(x=i, color="red", linestyle="dotted")
+plt.savefig("histogram.png")
+plt.savefig("histogram.pdf")
 plt.show()
+
 
 #---------------scatter plot color---------------
 
@@ -126,4 +129,6 @@ plt.scatter(list(data[5]), list(data[6]), alpha=0.2, c=color_list)
 plt.title("Scatter plot showing position of ions")
 plt.xlabel("y-axis")
 plt.ylabel("z-axis")
+plt.savefig("scatter.png")
+plt.savefig("scatter.pdf")
 plt.show()
