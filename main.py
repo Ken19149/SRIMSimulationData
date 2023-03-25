@@ -83,6 +83,7 @@ for i in fwhm_range:
 plt.show()
 
 #---------------scatter plot color---------------
+
 #horizontal
 horizontal_color = []
 min_horizontal = min(list(data[5]))
@@ -98,6 +99,7 @@ for i in list(data[5]):
     else:
         horizontal_color.append(color)
     color = 0.1
+
 #vertical
 vertical_color = []
 min_vertical = min(list(data[6]))
@@ -116,13 +118,12 @@ for i in list(data[6]):
 color_list = []
 loop_range = len(list(data[6]))
 for i in range(0, loop_range):
-    x = [horizontal_color[i], 0, vertical_color[i]]
+    x = [horizontal_color[i], 1, vertical_color[i]]
     color_list.append(x)
-print(max(color_list)+1)
+
 #---------------scatter plot----------------
-plt.scatter(list(data[5]), list(data[6]), alpha=1, c=color_list)
+plt.scatter(list(data[5]), list(data[6]), alpha=0.2, c=color_list)
 plt.title("Scatter plot showing position of ions")
 plt.xlabel("y-axis")
 plt.ylabel("z-axis")
 plt.show()
-
