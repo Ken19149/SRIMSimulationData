@@ -2,14 +2,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-'''
-text = str(open("Hydrogen in Carbon.txt", "r").read())
-text = text.replace("    ", "\t")
-text = text.replace("   ", "\t")
-text = text.replace("  ", "\t")
-text = text.replace(" ", "\t")
-'''
-
 data = pd.read_csv("Hydrogen in Carbon.txt", sep="\t", header=None)
 avg = np.mean(data[3])
 sd = np.std(data[3])
@@ -21,7 +13,7 @@ bins = 200
 
 ''''''
 #--------------histogram plot---------------
-x = plt.hist((data[3]), bins=bins, histtype="step")
+x = plt.hist((data[3]), bins=bins, histtype="step", color="#03a9fc")
 plt.title("Energy of Hydrogen Ions on Carbon Material")
 plt.xlabel("Energy (MeV)")
 plt.ylabel("Frequency")
@@ -125,7 +117,7 @@ for i in range(0, loop_range):
     color_list.append(x)
 
 #---------------scatter plot----------------
-plt.scatter(list(data[5]), list(data[6]), alpha=0.2, c=color_list)
+plt.scatter(list(data[5]), list(data[6]), alpha=0.5, c=color_list)
 plt.title("Scatter plot showing position of ions")
 plt.xlabel("y-axis")
 plt.ylabel("z-axis")
