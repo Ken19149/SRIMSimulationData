@@ -14,7 +14,7 @@ Histogram: show the data of frequency to the energy in MeV units
 ![Histogram](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/histogram/histogram_Copper.png?raw=true)
 ![Histogram](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/histogram/histogram_Iron.png?raw=true)
 ![Histogram](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/histogram/histogram_Zinc.png?raw=true)
-![Histogram](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/histogram/histogram plots.png?raw=true)
+![Histogram](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/histogram/histogram%20plots.png?raw=true)
 
 Scatter Plot: show the ions position on y and z-axis  
 ![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter.png?raw=true)
@@ -22,4 +22,4 @@ Scatter Plot: show the ions position on y and z-axis
 ![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter_Copper.png?raw=true)
 ![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter_Iron.png?raw=true)
 ![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter_Zinc.png?raw=true)
-![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter plots.png?raw=true)
+![Scatter Plot](https://github.com/Ken19149/SRIMSimulationData/blob/main/plots/scatter/scatter%20plots.png?raw=true)
