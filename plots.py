@@ -40,21 +40,21 @@ plt.show()
 #------------scatter plots----------------
 
 #set size
-'''
-canvas_size = []
-horizontal = []
-vertical = []
+
+limit = []
 for i in range(0, len(data)):
-    horizontal.append(max(data[i][5]))
-    horizontal.append(min(data[i][5]))
-    vertical.append(min(data[i][6]))
-    vertical.append(max(data[i][6]))
-horizontal_size = int(max(horizontal) - min(horizontal))
-vertical_size = int(max(vertical) - min(vertical))
-'''
+    limit.append(abs(max(data[i][5])))
+    limit.append(abs(min(data[i][5])))
+    limit.append(abs(min(data[i][6])))
+    limit.append(abs(max(data[i][6])))
+
 
 #show each plot
 for i in range(0, len(data)):
+    ax = plt.axes()
+    ax.set_aspect("equal")
+    ax.set_xlim(-max(limit), max(limit))
+    ax.set_ylim(-max(limit), max(limit))
     plt.title("Scatter plot showing position of ions on " + elements[i])
     plt.xlabel("y-axis")
     plt.ylabel("z-axis")
@@ -64,7 +64,11 @@ for i in range(0, len(data)):
     plt.show()
 
 #show all elements
+ax = plt.axes()
 for i in range(0, len(data)):
+    ax.set_aspect("equal")
+    ax.set_xlim(-max(limit), max(limit))
+    ax.set_ylim(-max(limit), max(limit))
     plt.scatter(data[i][5], data[i][6], alpha=0.5, color=colors[i])
 
 plt.title("Scatter plot showing position of ions")

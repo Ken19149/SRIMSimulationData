@@ -116,6 +116,19 @@ for i in range(0, loop_range):
     x = [horizontal_color[i], 1, vertical_color[i]]
     color_list.append(x)
 
+#--------------set size---------------------
+
+limit = []
+limit.append(abs(max(data[5])))
+limit.append(abs(min(data[5])))
+limit.append(abs(min(data[6])))
+limit.append(abs(max(data[6])))
+
+ax = plt.axes()
+ax.set_aspect("equal")
+ax.set_xlim(-max(limit), max(limit))
+ax.set_ylim(-max(limit), max(limit))
+
 #---------------scatter plot----------------
 plt.scatter(list(data[5]), list(data[6]), alpha=0.5, c=color_list)
 plt.title("Scatter plot showing position of ions")
