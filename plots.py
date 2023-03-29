@@ -20,7 +20,7 @@ for i in range(0, len(data)):
     plt.xlabel("Energy (MeV)")
     plt.ylabel("Frequency")
     plt.hist(data[i][3], bins=bins, histtype="step", color=colors[i])
-    file_name = "histogram_" + elements[i] + ".png"
+    file_name = "plots/histogram/histogram_" + elements[i] + ".png"
     plt.savefig(file_name)
     plt.show()
 
@@ -33,8 +33,8 @@ plt.legend(elements)
 plt.xlabel("Energy (MeV)")
 plt.ylabel("Frequency")
 
-plt.savefig("histogram plots.png")
-plt.savefig("histogram plots.pdf")
+plt.savefig("plots/histogram/histogram plots.png")
+plt.savefig("plot/histogram/histogram plots.pdf")
 plt.show()
 
 #------------scatter plots----------------
@@ -59,7 +59,7 @@ for i in range(0, len(data)):
     plt.xlabel("y-axis")
     plt.ylabel("z-axis")
     plt.scatter(data[i][5], data[i][6], alpha=0.5, color=colors[i])
-    file_name = "scatter_" + elements[i] + ".png"
+    file_name = "plots/scatter/scatter_" + elements[i] + ".png"
     plt.savefig(file_name)
     plt.show()
 
@@ -71,7 +71,7 @@ plt.title("Scatter plot showing position of ions")
 plt.xlabel("y-axis")
 plt.ylabel("z-axis")
 plt.legend(elements)
-plt.savefig("scatter plots.png")
-plt.savefig("scatter plots.pdf")
+plt.savefig("plots/scatter/scatter plots.png")
+plt.savefig("plots/scatter/scatter plots.pdf")
 
 plt.show()
