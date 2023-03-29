@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 elements = ["Carbon", "Copper", "Iron", "Zinc"]
 colors = ["#fc0362", "#03fc84", "#0352fc", "#cf03fc"]
 
-data_hydrogen = pd.read_csv("Hydrogen in Carbon.txt", sep="\t", header=None)
-data_copper = pd.read_csv("Hydrogen in Copper.txt", sep="\t", header=None)
-data_iron = pd.read_csv("Hydrogen in Iron.txt", sep="\t", header=None)
-data_zinc = pd.read_csv("Hydrogen in Zinc.txt", sep="\t", header=None)
+data_hydrogen = pd.read_csv("data/reformat/Hydrogen in Carbon.txt", sep="\t", header=None)
+data_copper = pd.read_csv("data/reformat/Hydrogen in Copper.txt", sep="\t", header=None)
+data_iron = pd.read_csv("data/reformat/Hydrogen in Iron.txt", sep="\t", header=None)
+data_zinc = pd.read_csv("data/reformat/Hydrogen in Zinc.txt", sep="\t", header=None)
 
 data = [data_hydrogen, data_copper, data_iron, data_zinc]
 
@@ -34,7 +34,7 @@ plt.xlabel("Energy (MeV)")
 plt.ylabel("Frequency")
 
 plt.savefig("plots/histogram/histogram plots.png")
-plt.savefig("plot/histogram/histogram plots.pdf")
+plt.savefig("plots/histogram/histogram plots.pdf")
 plt.show()
 
 #------------scatter plots----------------

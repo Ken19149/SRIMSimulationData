@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("Hydrogen in Carbon.txt", sep="\t", header=None)
+data = pd.read_csv("data/reformat/Hydrogen in Carbon.txt", sep="\t", header=None)
 avg = np.mean(data[3])
 sd = np.std(data[3])
 
@@ -73,7 +73,7 @@ plt.axhline(y=half_max_freq, color="red", linestyle="dotted")
 for i in fwhm_range:
     plt.axvline(x=i, color="red", linestyle="dotted")
 plt.savefig("plots/histogram/histogram.png")
-plt.savefig("plot/histogram/histogram.pdf")
+plt.savefig("plots/histogram/histogram.pdf")
 plt.show()
 
 
